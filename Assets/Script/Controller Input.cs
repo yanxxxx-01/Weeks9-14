@@ -16,8 +16,7 @@ public class ControllerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        transform.position += (Vector3)movement * speed * Time.deltaTime; // Move the player based on the movement input
+        transform.position = movement; // Move the player based on the movement input
     }
 
     public void OnPoint(InputAction.CallbackContext context)
