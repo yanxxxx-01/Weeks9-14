@@ -49,7 +49,7 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    public void OnUseTool(InputAction.CallbackContext context)
+     public void OnUseTool(InputAction.CallbackContext context)
     {
         //When the player presses the use tool button, set mouseIsPressed to true and invoke the OnUsingTool event
         if (context.started) //https://docs.unity3d.com/Packages/com.unity.inputsystem@1.7/manual/Actions
