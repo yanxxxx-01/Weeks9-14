@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class PlayerInput : MonoBehaviour
 {
     public float speed = 5f;
     public Vector2 movement;
-    public bool isUsingTool = false;
+    public UnityEvent OnUsingTool;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,7 +29,7 @@ public class PlayerInput : MonoBehaviour
 
     public void OnUseTool(InputAction.CallbackContext context)
     {
-        isUsingTool = context.ReadValueAsButton();
-        Debug.Log(isUsingTool);
+        Debug.Log("tool Using");
+
     }
 }
