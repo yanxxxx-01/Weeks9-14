@@ -15,8 +15,12 @@ public class WhenMouseOn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+       
 
+    }
+
+    public void MouseOn(Vector2 mousePos)
+    {
         //When the mouse enters the sprite's area, change its color to red
         if (sr.bounds.Contains(mousePos))
         {
@@ -26,8 +30,5 @@ public class WhenMouseOn : MonoBehaviour
         {
             sr.color = Color.white; // Change color back to white when mouse is not on the sprite
         }
-
     }
-
-
 }
