@@ -14,8 +14,7 @@ public class Tools : MonoBehaviour
     public bool mouseOnJug;
     public bool mouseOnManure;
 
-    private bool isMouseOnToolsLastFrame = false;
-    private bool isMouseOnTools = false;
+    public UnityEvent<int> OnToolSelected; // Event to notify when a tool is selected, passing the toolID as an argument
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +25,7 @@ public class Tools : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
+        
     }
 
     public void OnMouseMove(Vector2 mousePos)
@@ -59,6 +59,9 @@ public class Tools : MonoBehaviour
             toolID = 2;
             Debug.Log("manure selected");
         }
+
+        Debug.Log("Tool ID: " + toolID); // Log the selected toolID for debugging purposes
+        OnToolSelected.Invoke(toolID); // Invoke the OnToolSelected event with the selected toolID
 
     }
  
