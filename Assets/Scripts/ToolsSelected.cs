@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Tools : MonoBehaviour
@@ -7,6 +8,8 @@ public class Tools : MonoBehaviour
     public SpriteRenderer shovel; 
     public SpriteRenderer jug;
     public SpriteRenderer manure;
+
+    public UnityEvent OnSelectTool;
 
     Vector2 mousePos;
 
